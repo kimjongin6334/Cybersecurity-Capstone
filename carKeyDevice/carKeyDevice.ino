@@ -83,7 +83,7 @@ void loop() {
   DateTime now = rtc.now(); 
 
   //타임스탬프 테스트 코드
-   GMT = now.unixtime() - 32390; //시간 맞추기 위해 -32390
+   GMT = now.unixtime() - 32390; //시간 맞추기 위함
 
 
   char* newCode = totp.getCode(GMT);
