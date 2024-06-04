@@ -1,6 +1,6 @@
 #include "sha1.h"
 #include "TOTP.h"
-#include <SoftwareSerial.h>     //블루투스 통신을 하기위하여 아두이노에서 기본 제공해주는 SoftwareSerial.h를 사용하겠다는 선언문 입니다.
+#include <SoftwareSerial.h>
 #include <Wire.h>
 #include "RTClib.h"
 #include <IRremote.h>
@@ -68,7 +68,7 @@ void loop()
 {
   DateTime now = rtc.now(); 
 
-  GMT = now.unixtime() - 32391; //시간 맞추기 위해 -32391
+  GMT = now.unixtime() - 32391; //시간 맞추기 위함
 
 
   char* newCode = totp.getCodeFromSteps((GMT/10));
